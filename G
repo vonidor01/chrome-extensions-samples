@@ -1,0 +1,19 @@
+$ curl "localhost:8080/get?filename=testdata/music.mp3" -4 -v > test_chunk_music.mp3
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /get?filename=testdata/music.mp3 HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.47.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: audio/mp3
+< Grpc-Metadata-Accept-Encoding: identity,gzip
+< Grpc-Metadata-Content-Type: application/grpc
+< Grpc-Metadata-Grpc-Accept-Encoding: identity,deflate,gzip
+< Date: Wed, 27 Nov 2019 03:28:40 GMT
+< Transfer-Encoding: chunked
+< 
+{ [3836 bytes data
